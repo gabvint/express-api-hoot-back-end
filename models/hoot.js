@@ -29,7 +29,9 @@ const hootSchema = new mongoose.Schema(
         enum: ['News', 'Sports', 'Games', 'Movies', 'Music', 'Television'],
       },
 
+      // referencing the author to the user
     author: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+    // embedding the comments
     comments: [commentSchema]
 
     },
